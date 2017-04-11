@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ECBFEE5-B51A-4DD5-80BC-3CA7E03C23EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeaveApplication</RootNamespace>
+    <AssemblyName>LeaveApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewEmployee\AddNewEmployee.ascx.cs">
+      <DependentUpon>AddNewEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewEmployee\AddNewEmployee.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddNewEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AllEmployeeLeaveList\AllEmployeeLeaveList.ascx.cs">
+      <DependentUpon>AllEmployeeLeaveList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AllEmployeeLeaveList\AllEmployeeLeaveList.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllEmployeeLeaveList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CancelEmployeeLeaves\CancelEmployeeLeaves.ascx.cs">
+      <DependentUpon>CancelEmployeeLeaves.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CancelEmployeeLeaves\CancelEmployeeLeaves.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CancelEmployeeLeaves.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperManagement\DeveloperManagement.ascx.cs">
+      <DependentUpon>DeveloperManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperManagement\DeveloperManagement.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeveloperManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmployeeInformation\EditEmployeeInformation.ascx.cs">
+      <DependentUpon>EditEmployeeInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmployeeInformation\EditEmployeeInformation.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditEmployeeInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInformation\EmployeeInformation.ascx.cs">
+      <DependentUpon>EmployeeInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInformation\EmployeeInformation.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeInformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLeavesList\EmployeeLeavesList.ascx.cs">
+      <DependentUpon>EmployeeLeavesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLeavesList\EmployeeLeavesList.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeLeavesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLeaveStatus\EmployeeLeaveStatus.ascx.cs">
+      <DependentUpon>EmployeeLeaveStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLeaveStatus\EmployeeLeaveStatus.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeLeaveStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity.cs" />
+    <Compile Include="IssueAdminManagement\IssueAdminManagement.ascx.cs">
+      <DependentUpon>IssueAdminManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="IssueAdminManagement\IssueAdminManagement.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueAdminManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveInfo\LeaveInfo.ascx.cs">
+      <DependentUpon>LeaveInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveInfo\LeaveInfo.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveRequestForm\LeaveRequestForm.ascx.cs">
+      <DependentUpon>LeaveRequestForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveRequestForm\LeaveRequestForm.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveRequestForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyHistory\MyHistory.ascx.cs">
+      <DependentUpon>MyHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyHistory\MyHistory.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyTeamMemberDetail\MyTeamMemberDetail.ascx.cs">
+      <DependentUpon>MyTeamMemberDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyTeamMemberDetail\MyTeamMemberDetail.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyTeamMemberDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="New Issue Form\New Issue Form.ascx.cs">
+      <DependentUpon>New Issue Form.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="New Issue Form\New Issue Form.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>New Issue Form.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResignationForm\ResignationForm.ascx.cs">
+      <DependentUpon>ResignationForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ResignationForm\ResignationForm.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResignationForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Testapp\Testapp.ascx.cs">
+      <DependentUpon>Testapp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Testapp\Testapp.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Testapp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeLeaves\UpdateEmployeeLeaves.ascx.cs">
+      <DependentUpon>UpdateEmployeeLeaves.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeLeaves\UpdateEmployeeLeaves.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateEmployeeLeaves.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddNewEmployee\AddNewEmployee.webpart" />
+    <None Include="AddNewEmployee\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d503bc68-1450-4daf-b419-f476f6e00455}</SharePointProjectItemId>
+    </None>
+    <None Include="AllEmployeeLeaveList\AllEmployeeLeaveList.webpart" />
+    <None Include="AllEmployeeLeaveList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b15d344a-5d2e-41e4-ae41-f4d72f38e40c}</SharePointProjectItemId>
+    </None>
+    <None Include="App1.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CancelEmployeeLeaves\CancelEmployeeLeaves.webpart" />
+    <None Include="CancelEmployeeLeaves\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{066bdac0-4e27-467c-9070-6b40c61605ee}</SharePointProjectItemId>
+    </None>
+    <None Include="DeveloperManagement\DeveloperManagement.webpart" />
+    <None Include="DeveloperManagement\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d90ad886-5c92-489e-a18c-87bcb2e98535}</SharePointProjectItemId>
+    </None>
+    <None Include="EditEmployeeInformation\EditEmployeeInformation.webpart" />
+    <None Include="EditEmployeeInformation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b6023337-7e4e-45fe-95e3-fab2f6501747}</SharePointProjectItemId>
+    </None>
+    <None Include="EmployeeInformation\EmployeeInformation.webpart" />
+    <None Include="EmployeeInformation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cdaf678b-b0a1-4907-ab96-fc66c9bd7579}</SharePointProjectItemId>
+    </None>
+    <None Include="EmployeeLeavesList\EmployeeLeavesList.webpart" />
+    <None Include="EmployeeLeavesList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7e264021-4ce2-4a17-bffe-4017f8436d86}</SharePointProjectItemId>
+    </None>
+    <None Include="EmployeeLeaveStatus\EmployeeLeaveStatus.webpart" />
+    <None Include="EmployeeLeaveStatus\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0eac71f6-f9be-47bf-be0e-269f46e47c85}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{94ccb1d6-ecc1-459b-92d2-11617d1218cc}</FeatureId>
+    </None>
+    <None Include="Features\LeaveApplication\LeaveApplication.feature">
+      <FeatureId>{b4aa68f2-f772-4603-9a3a-8aabe4c4501d}</FeatureId>
+    </None>
+    <None Include="IssueAdminManagement\IssueAdminManagement.webpart" />
+    <None Include="IssueAdminManagement\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c0ae9977-1724-42e5-a37a-7ed16770c3ff}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e3415d40-11fd-4eaa-909d-acc1e099c3f9}</SharePointProjectItemId>
+    </None>
+    <None Include="LeaveInfo\LeaveInfo.webpart" />
+    <None Include="LeaveInfo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d5333c58-39cb-4280-b482-74c3bb282f47}</SharePointProjectItemId>
+    </None>
+    <None Include="LeaveRequestForm\LeaveRequestForm.webpart" />
+    <None Include="LeaveRequestForm\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{953c6d0e-9c7a-4896-8df6-8d023f4fcabc}</SharePointProjectItemId>
+    </None>
+    <None Include="MyHistory\MyHistory.webpart" />
+    <None Include="MyHistory\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{368d05d4-b9b9-4d5b-8c05-e0f6fa47ca75}</SharePointProjectItemId>
+    </None>
+    <None Include="MyTeamMemberDetail\MyTeamMemberDetail.webpart" />
+    <None Include="MyTeamMemberDetail\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3a09d82f-9ddc-41ee-b8ba-51b3009d54b3}</SharePointProjectItemId>
+    </None>
+    <None Include="New Issue Form\New Issue Form.webpart" />
+    <None Include="New Issue Form\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f2fe4c16-8b2c-42cb-a489-d3ed5a81543b}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{0ef2c93a-c07e-4eaf-8f76-b8750ee079f5}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="ResignationForm\ResignationForm.webpart" />
+    <None Include="ResignationForm\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4f3fde67-ed06-49a1-abdd-755dff7d3e68}</SharePointProjectItemId>
+    </None>
+    <None Include="Testapp\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cc9c5635-2813-4435-9e68-e769bcc45786}</SharePointProjectItemId>
+    </None>
+    <None Include="Testapp\Testapp.webpart" />
+    <None Include="UpdateEmployeeLeaves\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b35c70c4-4dbf-4a8d-a8da-d26901c89039}</SharePointProjectItemId>
+    </None>
+    <None Include="UpdateEmployeeLeaves\UpdateEmployeeLeaves.webpart" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AllEmployeeLeaveList\AllEmployeeLeaveList.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>AllEmployeeLeaveList.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="AllEmployeeLeaveList\Elements.xml" />
+    <Content Include="CancelEmployeeLeaves\CancelEmployeeLeaves.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>CancelEmployeeLeaves.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="CancelEmployeeLeaves\Elements.xml" />
+    <Content Include="DeveloperManagement\DeveloperManagement.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DeveloperManagement.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="DeveloperManagement\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="IssueAdminManagement\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="IssueAdminManagement\IssueAdminManagement.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>IssueAdminManagement.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Layouts\LeaveApplication\AddNewEmployee.js" />
+    <Content Include="AddNewEmployee\AddNewEmployee.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>AddNewEmployee.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="AddNewEmployee\Elements.xml" />
+    <Content Include="Layouts\LeaveApplication\CancelLeaves.js" />
+    <Content Include="EditEmployeeInformation\EditEmployeeInformation.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>EditEmployeeInformation.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="EditEmployeeInformation\Elements.xml" />
+    <Content Include="EmployeeInformation\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="EmployeeInformation\EmployeeInformation.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>EmployeeInformation.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="EmployeeLeavesList\Elements.xml" />
+    <Content Include="EmployeeLeavesList\EmployeeLeavesList.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>EmployeeLeavesList.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="EmployeeLeaveStatus\Elements.xml" />
+    <Content Include="EmployeeLeaveStatus\EmployeeLeaveStatus.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>EmployeeLeaveStatus.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Features\LeaveApplication\LeaveApplication.Template.xml">
+      <DependentUpon>LeaveApplication.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Layouts\LeaveApplication\jquery.min.js" />
+    <Content Include="Layouts\LeaveApplication\StyleSheet.css" />
+    <Content Include="Layouts\LeaveApplication\SPOpenDialog.js" />
+    <Content Include="Layouts\LeaveApplication\LeaveRequest.js" />
+    <Content Include="LeaveInfo\Elements.xml" />
+    <Content Include="LeaveInfo\LeaveInfo.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>LeaveInfo.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="LeaveRequestForm\Elements.xml" />
+    <Content Include="LeaveRequestForm\LeaveRequestForm.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>LeaveRequestForm.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Layouts\LeaveApplication\LeaveStatus.js" />
+    <Content Include="MyHistory\Elements.xml" />
+    <Content Include="MyHistory\MyHistory.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MyHistory.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="MyTeamMemberDetail\Elements.xml" />
+    <Content Include="MyTeamMemberDetail\MyTeamMemberDetail.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MyTeamMemberDetail.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="New Issue Form\Elements.xml" />
+    <Content Include="New Issue Form\New Issue Form.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>New Issue Form.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="ResignationForm\Elements.xml" />
+    <Content Include="ResignationForm\ResignationForm.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>ResignationForm.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Testapp\Elements.xml" />
+    <Content Include="Testapp\Testapp.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Testapp.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="UpdateEmployeeLeaves\Elements.xml" />
+    <Content Include="UpdateEmployeeLeaves\UpdateEmployeeLeaves.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>UpdateEmployeeLeaves.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

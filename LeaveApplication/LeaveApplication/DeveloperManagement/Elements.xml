@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="DeveloperManagement" List="113" Url="_catalogs/wp">
+    <File Path="DeveloperManagement\DeveloperManagement.webpart" Url="LeaveApplication_DeveloperManagement.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

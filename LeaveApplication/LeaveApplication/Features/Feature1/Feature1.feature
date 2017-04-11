@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c6f7b503-59c3-4621-9224-7d4c3751bd35" alwaysForceInstall="true" featureId="c6f7b503-59c3-4621-9224-7d4c3751bd35" imageUrl="" scope="Site" solutionId="00000000-0000-0000-0000-000000000000" title="LeaveApplication Feature1" version="" deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel" />
